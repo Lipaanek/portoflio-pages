@@ -1,0 +1,268 @@
+* {
+    background-color: rgb(8, 8, 8);
+    font-family: 'CaskaydiaCove Nerd Font Mono';
+    color: aliceblue;
+}
+
+
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+    width: 70vh;
+    filter: drop-shadow(5 5 white);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    padding: 1.5vh;
+    
+    border: 0.5vh solid transparent;
+    border-radius: 2vh;
+    background:
+        linear-gradient(rgb(24, 24, 24), rgb(24, 24, 24)) padding-box,
+        linear-gradient(var(--border-angle, 45deg), red, blue) border-box;
+    animation: spin 10s linear infinite;
+}
+
+.about-me p {
+    margin-top: 0;
+    padding-top: 0;
+    background-color: transparent;
+    margin-left: 2vh;
+    margin-right: 4vh;
+    color: white;
+}
+
+.about-me h1 {
+    background-color: transparent;
+    margin-left: 2vh;
+    margin-right: 4vh;
+}
+
+h1 {
+    margin-top: 2vh;
+    font-weight: 700;
+    font-size: 3.5vh;
+}
+
+.about-me .logo {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    background-color: transparent;
+    border-radius: 1vh;
+}
+
+@property --border-angle {
+    syntax: "<angle>";
+    initial-value: 45deg;
+    inherits: false;
+}
+
+@keyframes spin {
+    to {
+        --border-angle: 405deg;
+        /* 360deg + original 45deg for seamless loop */
+    }
+}
+
+.projects {
+    display: flex;
+        flex-direction: column;
+        width: 70vh;
+        filter: drop-shadow(5 5 white);
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1.5vh;
+        margin-top: 5vh;
+        border: 0.5vh solid transparent;
+        border-radius: 2vh;
+        background:
+            linear-gradient(rgb(24, 24, 24), rgb(24, 24, 24)) padding-box,
+            linear-gradient(var(--border-angle, 45deg), red, blue) border-box;
+        animation: spin 10s linear infinite;
+}
+
+.projects h1 {
+    font-size: xx-large;
+}
+
+.projects .video-project {
+    padding-top: 2.5vh;
+}
+
+.projects .video-project img {
+    max-width: 100%;
+    height: auto;
+}
+
+.projects .video-project p {
+    color: white;
+}
+
+.projects .video-project h2 {
+    margin: 0;
+    padding: 0;
+    font-size: x-large;
+}
+
+.projects .video-project a {
+    color:rgb(0, 162, 255);
+    margin-top: 10vh;
+    text-decoration: none;
+}
+
+.projects .video-project a:hover {
+    color: rgb(145, 215, 255);
+    margin-top: 10vh;
+    text-decoration: none;
+}
+
+.projects p {
+    color: white;
+}
+
+.projects * {
+    background: transparent;
+}
+
+.contancs a, p {
+    color: rgb(0, 162, 255);
+    text-decoration: none;
+}
+
+/* Music Player Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    overflow: hidden;
+}
+
+.modal-content {
+    background: linear-gradient(rgb(24, 24, 24), rgb(24, 24, 24)) padding-box,
+                linear-gradient(var(--border-angle, 45deg), red, blue) border-box;
+    border: 0.5vh solid transparent;
+    border-radius: 2vh;
+    margin: 10vh auto;
+    padding: 2vh;
+    width: 80%;
+    max-width: 900px;
+    max-height: 80vh;
+    overflow: hidden;
+    animation: spin 10s linear infinite;
+}
+
+.close-btn {
+    color: white;
+    float: right;
+    font-size: 4vh;
+    font-weight: bold;
+    cursor: pointer;
+    background: transparent;
+    line-height: 1;
+}
+
+.close-btn:hover {
+    color: rgb(145, 215, 255);
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: row;
+    gap: 2vh;
+    margin-top: 2vh;
+    height: 60vh;
+}
+
+.video-container {
+    flex: 2;
+    background-color: rgb(0, 0, 0);
+    border-radius: 1vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 600px;
+}
+
+#video-placeholder {
+    color: white;
+    font-size: 2vh;
+    text-align: center;
+}
+
+#video-placeholder iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 1vh;
+}
+
+.song-list-container {
+    flex: 1;
+    background-color: rgb(20, 20, 20);
+    border-radius: 1vh;
+    overflow-y: auto;
+    max-width: 300px;
+}
+
+#song-list {
+    padding: 1vh;
+}
+
+.song-item {
+    padding: 1vh;
+    color: white;
+    cursor: pointer;
+    border-bottom: 1px solid rgb(40, 40, 40);
+    transition: background-color 0.3s;
+}
+
+.song-item:hover {
+    background-color: rgb(40, 40, 40);
+}
+
+.song-item.active {
+    background-color: rgb(0, 162, 255);
+}
+
+/* Custom scrollbar for song list */
+.song-list-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.song-list-container::-webkit-scrollbar-track {
+    background: rgb(20, 20, 20);
+    border-radius: 4px;
+}
+
+.song-list-container::-webkit-scrollbar-thumb {
+    background: rgb(100, 100, 100);
+    border-radius: 4px;
+}
+
+.song-list-container::-webkit-scrollbar-thumb:hover {
+    background: rgb(150, 150, 150);
+}
+
+/* Open Music button styling */
+.open-music-btn {
+    margin-top: 1vh;
+    padding: 0.8vh 1.5vh;
+    background: rgb(24, 24, 24);
+    border: none;
+    border-radius: 1vh;
+    color: white;
+    font-size: 1.5vh;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.open-music-btn:hover {
+    transform: scale(1.05);
+}

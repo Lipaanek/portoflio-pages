@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lipaanek - Cinematic Music Library</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="about-me">
+        <h1>Lipaanek</h1>
+        <p>My name is Lipaanek. I'm a composer with 5 years of experience. I specialize in any kind of electronic, cinematic and
+    orchestral music.</p>
+
+        <img class="logo" src="logo.png">
+    </div>
+    <div class="projects">
+        <h1>Best Projects</h1>
+        <div class="video-project">
+            <h2>D&D Vol. 1</h2>
+            <p>This project is about my D&D party's journey through the world. The album isn't done, but has a solid foundation and shows my skills.</p>
+            <img class="thumbnail" src="thumbnails/dnd_music.jpg" alt="">
+            <button class="open-music-btn" data-project="dnd">Open Music</button>
+        </div>
+        <div class="video-project">
+            <h2>Tower Defense: Apocalypse</h2>
+            <p>I worked for TDA as a main composer. I made over 6 OSTs for them and the number will probably keep rising.</p>
+            <img class="thumbnail" src="thumbnails/tda_music.png" alt="">
+            <button class="open-music-btn" data-project="tda">Open Music</button>
+        </div>
+        <div class="video-project">
+            <h2>Pure Mess</h2>
+            <p>My first ever album. This album consists of "random" songs I found in my files.</p>
+            <img class="thumbnail" src="thumbnails/absolute garbage.png" alt="">
+            <button class="open-music-btn" data-project="pure-mess">Open Music</button>
+        </div>
+        <p>And much more as singletons are left on my disc waiting for me to form a new album.</p>
+    </div>
+    <div class="contancs">
+        <a href="mailto:lipaanek@gmail.com">e-mail</a>
+        <p>Discord: Lipaanek</p>
+    </div>
+
+    <!-- Music Player Modal -->
+    <div id="music-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-body">
+                <div class="video-container">
+                    <div id="video-placeholder">Click a song to play</div>
+                </div>
+                <div class="song-list-container">
+                    <div id="song-list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
